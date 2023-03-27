@@ -7,7 +7,6 @@
 }
 
 .inner>* {
-    flex: 1;
     display: flex;
     /* justify-content: center;
     align-items: center; */
@@ -86,14 +85,25 @@
 /* Section Content */
 
 
+.section .inner {
+    width: 1300px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
 
 .section .content {
-
+    flex: 7;
+    background: tomato;
     opacity: 0;
     transform: translate(-300px, 0);
     height: 400px;
     overflow: hidden;
     align-items: start;
+    border-radius: 20px;
+    border: 2px solid #000;
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section .content .case {
@@ -106,33 +116,21 @@
 }
 
 
+.section .description {
+    display: block;
+    flex: 3;
+    border-radius: 20px;
+    align-items: start;
+    line-height: 30px;
+    opacity: 0;
+    transform: translate(300px, 0);
+
+}
 
 .section.on .content {
     transform: translate(0, 0);
     opacity: 1;
     transition: 1s 1s;
-}
-
-
-/* Section Description */
-
-
-.section .description {
-    padding: 20px 0;
-    opacity: 0;
-    transform: translate(300px, 0);
-    align-items: start;
-    line-height: 30px;
-
-
-}
-
-.section .description .desc_txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 60px;
-
 }
 
 .section.on .description {
@@ -141,26 +139,122 @@
     transition: 1s 2s;
 }
 
-.section .description .tit {
-    font-size: 38px;
+
+
+.section .description strong {
+    display: block;
+    font-size: 11px;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
-.section .description ul>li {
-    font-size: 18px;
+.section .description h2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
 }
 
-.section .description .desc_txt .btn {}
+.section .description h2 img {
+    width: 155px;
+}
 
-.section .description .desc_txt .btn a {
+.section .description h2::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 500px;
+    background: #000;
+    margin: 20px 0;
+    transition: 1s 0.3s;
+}
+
+
+.section .description span {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
+.section .description .txt_row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.8;
+}
+
+.section .description .txt_row dl,
+.section .description .txt_row dd {
+    width: 500px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.section .description .txt_row dt {
+    float: left;
+    width: 70px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.section .description .txt_row span {
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.section .description .txt_row .color {
     display: inline-block;
-    text-align: center;
-    width: 200px;
-    margin-right: 100px;
-    border: 1px solid #000;
-
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 2px 0 0 0;
 }
 
+.section .description .txt_row .c01 {
+    background: #000;
+}
+
+.section .description .txt_row .c02 {
+    background: #444;
+}
+
+.section .description .txt_row .c03 {
+    background: #555;
+}
+
+.section .description .txt_row .c04 {
+    background: #666;
+}
+
+.section .description .txt_row .color .toTop {
+    position: fixed;
+    inset: auto 50px 50px auto;
+    z-index: 999;
+}
+
+.section .description .btn {
+    display: flex;
+    justify-content: left;
+    width: 350px;
+    text-align: center;
+}
+
+.section .description .btn a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 35px 15px 0 0;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 500;
+    transition: 0.5s;
+
+}
 
 
 
