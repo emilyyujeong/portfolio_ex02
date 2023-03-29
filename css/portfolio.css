@@ -106,9 +106,16 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.section.on .content {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+
 .section .content .case {
     transform: translate(0, 0);
-    transition: 2s;
+    transition: 1s;
 }
 
 .section .content:hover .case {
@@ -125,12 +132,6 @@
     opacity: 0;
     transform: translate(300px, 0);
 
-}
-
-.section.on .content {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 1s;
 }
 
 .section.on .description {
@@ -256,7 +257,138 @@
 
 }
 
+/* section 02 */
 
+.sec02 .content {
+    background: #ddd;
+}
+
+.sec02 .content:hover .case {
+    transform: translate(0, calc(-100% + 600px));
+}
+
+
+.sec02 .inner {
+    height: 600px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    overflow: hidden;
+    gap: 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sec02 .content {
+    flex: 7;
+    background: tomato;
+    opacity: 0;
+    transform: translate(-300px, 0);
+    height: 600px;
+    overflow: hidden;
+    align-items: start;
+    border-radius: 0px;
+    border: none;
+
+    box-shadow: 0 0 0;
+    border-right: 1px solid #ddd;
+}
+
+
+
+
+.sec02 .description {
+    line-height: 40px;
+    padding: 20px 0 50px 0;
+}
+
+.sec02 .description strong {
+    padding-left: 10px;
+}
+
+.sec02 .description .txt_row {
+    line-height: 40px;
+    font-size: 30px;
+}
+
+
+.sec02 .description h2 {
+    padding-left: 10px;
+}
+
+
+.sec02 .description h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 510px;
+    background: #ddd;
+}
+
+.sec02 .description .btn {
+    padding-top: 50px;
+    padding-left: 10px;
+}
+
+.section .description .btn a {
+    box-shadow: 0 0 0;
+
+}
+
+.sec02 .description .txt_row {
+    padding-left: 10px;
+}
+
+
+/* section 03 */
+
+
+
+.sec03 .inner {
+    border: 1px solid #000;
+    height: 650px;
+    border-radius: 20px;
+    justify-content: center;
+    padding: 100px 30px;
+    gap: 30px;
+}
+
+.section .content_bg {
+    z-index: 999;
+    opacity: 0;
+    overflow: hidden;
+    height: 400px;
+    width: 650px;
+    background: url(../images/mokup01.png) no-repeat center center/cover;
+
+}
+
+
+.sec03 .content {
+    margin: 15px 55px;
+    background: none;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    left: -5px;
+    opacity: 0;
+    border-radius: 10px;
+    border: none;
+
+    box-shadow: 0 0 0;
+}
+
+
+.section.on .content_bg {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+.sec03 .content:hover .case {
+    transform: translate(0, calc(-100% + 430px));
+}
 
 /* SECTION PROFILE  */
 
